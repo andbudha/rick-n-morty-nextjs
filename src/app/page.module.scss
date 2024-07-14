@@ -1,10 +1,13 @@
 .home_main_box {
-  // border: 1px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100%;
   width: 100%;
   font-size: 1.2rem;
+  .home_page_span {
+    font-weight: 800;
+  }
 }
