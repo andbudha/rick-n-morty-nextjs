@@ -3,15 +3,19 @@ import styles from './characterinfo.module.scss';
 import { Character } from '@/models/custom-types';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 import Link from 'next/link';
+import Loader from '../loading';
 
 const characterinfo = async () => {
-  const response = await fetch('https://rickandmortyapi.com/api/character/2');
+  const response = await fetch(
+    `https://rickandmortyapi.com/api/character/${10}`
+  );
   const character: Character = await response.json();
   console.log('Character Info Page: ', character);
 
   return (
     <div className={styles.info_main_box}>
       <div className={styles.main_character_info_box}>
+        {!character && <Loader />}
         <div className={styles.character_image_box}>
           <img
             src={character.image}
@@ -20,7 +24,10 @@ const characterinfo = async () => {
           />
         </div>
         <div className={styles.character_info_box}>
-          <h2>{character.name}</h2>
+          <h3>
+            Name:{' '}
+            <span className={styles.character_info_span}>{character.name}</span>{' '}
+          </h3>
           <h3>
             Gender:{' '}
             <span className={styles.character_info_span}>
@@ -56,16 +63,16 @@ const characterinfo = async () => {
       </div>
       <div className={styles.main_button_box}>
         <Link className={styles.button} href={'/characters'}>
-          <span className={styles.text_span}>characters</span>{' '}
+          <span className={styles.text_span}>back to list</span>{' '}
           <GrFormPrevious className={styles.icon} />
         </Link>
         <div className={styles.button}>
-          <span className={styles.text_span}>next</span>{' '}
-          <GrFormNext className={styles.icon} />
+          <GrFormPrevious className={styles.icon} />
+          <span className={styles.text_span}>prev</span>{' '}
         </div>
         <div className={styles.button}>
-          <span className={styles.text_span}>prev</span>{' '}
-          <GrFormPrevious className={styles.icon} />
+          <span className={styles.text_span}>next</span>{' '}
+          <GrFormNext className={styles.icon} />
         </div>
       </div>
     </div>
