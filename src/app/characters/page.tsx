@@ -38,7 +38,7 @@ const Characters = () => {
             <div key={character.id} className={styles.character_card_box}>
               <Link
                 className={styles.read_more_link_box}
-                href={'/characterinfo'}
+                href={`/characters/${character.id}`}
               >
                 <h4 className={styles.read_more_text}>Read More</h4>
               </Link>
