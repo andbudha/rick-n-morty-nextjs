@@ -7,7 +7,12 @@
   height: 100%;
   width: 100%;
   font-size: 1.2rem;
-  .home_page_span {
-    font-weight: 800;
+
+  .home_info_box {
+    max-width: 800px;
+    min-height: 400px;
+    .home_page_span {
+      font-weight: 800;
+    }
   }
 }
