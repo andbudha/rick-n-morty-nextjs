@@ -19,9 +19,9 @@ const Navbar = () => {
         </Link>
         <Link
           className={`${styles.navbar_link} ${
-            pathname === '/characters' && styles.active_link
+            pathname.includes('characters') && styles.active_link
           }`}
-          href={'/characters'}
+          href={'/characters/1'}
         >
           Characters
         </Link>
