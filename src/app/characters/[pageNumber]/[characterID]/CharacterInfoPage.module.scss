@@ -1,0 +1,111 @@
+.info_main_box {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .main_character_info_box {
+    position: relative;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 10px;
+    min-height: 350px;
+    max-width: 720px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #402e7a 0px 1px 3px 0px;
+    .character_image_box {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 340px;
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .character_image {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .character_info_box {
+      position: relative;
+      margin: 0;
+      box-sizing: border-box;
+      padding-left: 20px;
+      height: 340px;
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .character_info_span {
+        font-weight: 300;
+        font-size: 1.1rem;
+      }
+      .num_of_episodes {
+        font-weight: 800;
+      }
+    }
+  }
+  .main_button_box {
+    min-height: 50px;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    .button {
+      cursor: pointer;
+      border-radius: 6px;
+      margin: 0 10px;
+      height: 40px;
+      width: 170px;
+      background-color: #402e7a;
+      color: #fff;
+      box-shadow: #402e7a 0px 2px 4px;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .text_span {
+        height: 26px;
+        min-width: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+      }
+      .icon {
+        height: 26px;
+        width: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+      }
+      &:hover {
+        background-color: #fff;
+        color: #402e7a;
+        transition: 0.4s;
+      }
+      &:not(:hover) {
+        transition: 0.5s;
+      }
+      &:disabled {
+        background-color: #fff;
+        color: #402e7a;
+        box-shadow: none;
+      }
+    }
+  }
+}
