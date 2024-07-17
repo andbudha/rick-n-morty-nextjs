@@ -34,3 +34,27 @@ export type APIResponse = {
   info: Info;
   results: Character[];
 };
+
+//seasons gql-response-types
+
+export interface Main {
+  data: Data;
+}
+
+export interface Data {
+  episodes: Episodes;
+}
+
+export interface Episodes {
+  results: Episode[];
+}
+
+export interface Episode {
+  name: string;
+  episode: string;
+  characters: GqlCharacter[];
+}
+
+export interface GqlCharacter {
+  image: string;
+}
